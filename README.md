@@ -16,13 +16,14 @@ Restart the terminal after installing.
 
 ## Database Setup
 
-Run `sql/employees.sql` in your Supabase SQL Editor. This creates:
+In your Supabase SQL Editor, run the files in [`database/`](database/README.md) in order:
+`01_schema.sql`, `02_functions.sql`, `03_seed.sql`, `04_storage.sql`.
+They create every table, function and storage bucket the backend uses, plus
+roles, the four companies, tax codes and a starter chart of accounts.
+See [`database/README.md`](database/README.md) for details and the optional
+production lock-down (`05_enable_rls.sql`).
 
-- `roles` — reference table of all valid roles
-- `employees` — employee accounts
-- `employee_roles` — assigns one or more roles per employee
-
-A default Super Admin account is created automatically:
+A default Super Admin account is created automatically. **Change its password after the first login.**
 
 | Field    | Value             |
 | -------- | ----------------- |
@@ -35,7 +36,7 @@ A default Super Admin account is created automatically:
 
 ```env
 SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_KEY=your-publishable-key
+SUPABASE_KEY=your-secret-key   # service_role / sb_secret_... (see database/README.md)
 
 JWT_SECRET=your-secret-key-change-in-production
 JWT_ALGORITHM=HS256
