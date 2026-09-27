@@ -89,6 +89,17 @@ npm run dev:frontend
 Frontend runs at `http://localhost:5173`, backend at `http://localhost:8000`.  
 Interactive API docs: `http://localhost:8000/docs`
 
+## Demo Data (optional, test databases only)
+
+With the backend running, load one example of every main flow (employees, clients,
+products, quotations, purchasing → AP, AR, GL, payroll, commissions, tax forms)
+so every screen has data to look at:
+
+```powershell
+cd backend
+uv run python seed_demo.py
+```
+
 ## API Endpoints
 
 | Method | Endpoint | Auth | Description |

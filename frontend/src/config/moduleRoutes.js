@@ -64,7 +64,7 @@ export const MODULE_ROUTES = {
     path: 'tax',
     moduleKey: 'tax',
     defaultSubRoute: 'dashboard',
-    validSubRoutes: ['dashboard', 'forms', 'vat', 'wht', 'deadlines', 'codes'],
+    validSubRoutes: ['dashboard', 'forms', 'vat', 'wht', 'reminders', 'deadlines', 'codes'],
   },
   loa: {
     path: 'loa',

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { AppLayout } from '@/components/layout/AppLayout'
 import { useSubRouteTracker } from '@/hooks/useSubRouteTracker'
@@ -105,6 +105,8 @@ import {
   TaxWHTSummary,
 
   TaxReminders,
+  TaxFilingDeadlines,
+  TaxCodes,
   Form2307,
   Form2307Detail,
   Form2307Print,
@@ -173,6 +175,12 @@ import { ModuleGuard } from '@/components/ui/module-guard'
 import { SessionGuard } from '@/components/ui/session-guard'
 
 // Inner component so useNavigate works inside BrowserRouter
+// Unknown project sub-tab -> that project's overview (absolute, so it can't loop).
+function ProjectOverviewRedirect() {
+  const { id } = useParams()
+  return <Navigate to={`/projects/${id}/overview`} replace />
+}
+
 function AppRoutes() {
   const [user, setUser] = useState(() => getStoredUser())
   const navigate = useNavigate()
@@ -227,7 +235,7 @@ function AppRoutes() {
         >
           <Route index element={<PersistentRedirect modulePath="masterdata" defaultRoute="clients" />} />
           <Route path=":resource" element={<MasterDataContent />} />
-          <Route path="*" element={<Navigate to="clients" replace />} />
+          <Route path="*" element={<Navigate to="/masterdata/clients" replace />} />
         </Route>
         <Route
           path="inventory"
@@ -242,7 +250,7 @@ function AppRoutes() {
           <Route path="products-services/*" element={<PSLayout />} />
           <Route path="movements" element={<StockMovement />} />
           <Route path="deliveries" element={<DeliveryNotes />} />
-          <Route path="*" element={<Navigate to="products-services" replace />} />
+          <Route path="*" element={<Navigate to="/inventory/products-services" replace />} />
         </Route>
         <Route
           path="quotation"
@@ -259,7 +267,7 @@ function AppRoutes() {
           <Route path=":id/edit" element={<QuotationEdit />} />
           <Route path=":id/history" element={<QuotationHistory />} />
           <Route path=":id/versions" element={<QuotationVersions />} />
-          <Route path="*" element={<Navigate to="list" replace />} />
+          <Route path="*" element={<Navigate to="/quotation/list" replace />} />
         </Route>
         <Route
           path="purchasing"
@@ -296,7 +304,7 @@ function AppRoutes() {
           <Route path="reports" element={<SalesReports />} />
           <Route path="sales-orders" element={<SalesOrderList />} />
           <Route path="sales-orders/:id" element={<SalesOrderDetail />} />
-          <Route path="*" element={<Navigate to="pipeline" replace />} />
+          <Route path="*" element={<Navigate to="/crm/pipeline" replace />} />
         </Route>
         <Route
           path="projects"
@@ -316,10 +324,10 @@ function AppRoutes() {
             <Route path="tasks" element={<ProjectTasksTab />} />
             <Route path="materials" element={<ProjectMaterialsTab />} />
             <Route path="documents" element={<ProjectDocumentsTab />} />
-            <Route path="*" element={<Navigate to="overview" replace />} />
+            <Route path="*" element={<ProjectOverviewRedirect />} />
           </Route>
           <Route path=":id/edit" element={<ProjectEdit />} />
-          <Route path="*" element={<Navigate to="list" replace />} />
+          <Route path="*" element={<Navigate to="/projects/list" replace />} />
         </Route>
         <Route
           path="accounts-receivable"
@@ -335,7 +343,7 @@ function AppRoutes() {
           <Route path="invoices/:id" element={<ARInvoiceDetail />} />
           <Route path="statements" element={<ARStatements />} />
           <Route path="reports" element={<ARReports />} />
-          <Route path="*" element={<Navigate to="workbench" replace />} />
+          <Route path="*" element={<Navigate to="/accounts-receivable/workbench" replace />} />
         </Route>
         <Route
           path="accounts-payable"
@@ -355,7 +363,7 @@ function AppRoutes() {
           <Route path="checks" element={<APChecks />} />
           <Route path="aging" element={<APAging />} />
           <Route path="reports" element={<APReports />} />
-          <Route path="*" element={<Navigate to="dashboard" replace />} />
+          <Route path="*" element={<Navigate to="/accounts-payable/dashboard" replace />} />
         </Route>
         <Route
           path="hr"
@@ -374,7 +382,7 @@ function AppRoutes() {
           <Route path="performance" element={<PerformanceEvaluation />} />
           <Route path="training" element={<TrainingRecords />} />
           <Route path="reports" element={<HRReports />} />
-          <Route path="*" element={<Navigate to="201" replace />} />
+          <Route path="*" element={<Navigate to="/hr/201" replace />} />
         </Route>
         <Route path="documents" element={isLoggedIn ? <ModuleGuard moduleKey="documents"><DocumentManagement user={user} /></ModuleGuard> : <Navigate to="/login" replace />} />
         <Route
@@ -445,9 +453,11 @@ function AppRoutes() {
           <Route path="vat" element={<TaxVATSummary />} />
           <Route path="wht" element={<TaxWHTSummary />} />
           <Route path="reminders" element={<TaxReminders />} />
+          <Route path="deadlines" element={<TaxFilingDeadlines />} />
+          <Route path="codes" element={<TaxCodes />} />
           <Route path="sample-forms" element={<SampleBIRForms />} />
 
-          <Route path="*" element={<Navigate to="dashboard" replace />} />
+          <Route path="*" element={<Navigate to="/tax/dashboard" replace />} />
         </Route>
         <Route
           path="loa"
@@ -463,7 +473,7 @@ function AppRoutes() {
           <Route path="purchase" element={<PurchaseTrailTab />} />
           <Route path="missing" element={<MissingDocsTab />} />
           <Route path="search" element={<DocumentSearchTab />} />
-          <Route path="*" element={<Navigate to="bir" replace />} />
+          <Route path="*" element={<Navigate to="/loa/bir" replace />} />
         </Route>
         <Route
           path="payroll"
@@ -479,7 +489,7 @@ function AppRoutes() {
           <Route path="generate" element={<PayrollGenerate />} />
           <Route path="history" element={<Navigate to="../generate" replace />} />
           <Route path="loans" element={<PayrollLoans />} />
-          <Route path="*" element={<Navigate to="dashboard" replace />} />
+          <Route path="*" element={<Navigate to="/payroll/dashboard" replace />} />
         </Route>
         <Route path="commission" element={isLoggedIn ? <ModuleGuard moduleKey="commission"><CommissionManagement user={user} /></ModuleGuard> : <Navigate to="/login" replace />} />
         {/* Under Development modules */}
@@ -493,7 +503,7 @@ function AppRoutes() {
           <Route path="task-logs" element={<TaskLogs />} />
           <Route path="nda" element={<NDAMonitoring />} />
           <Route path="evaluation" element={<Evaluation />} />
-          <Route path="*" element={<Navigate to="interns" replace />} />
+          <Route path="*" element={<Navigate to="/ojt/interns" replace />} />
         </Route>
         <Route
           path="reports"
@@ -511,7 +521,7 @@ function AppRoutes() {
           <Route path="sales-performance" element={<SalesPerformance />} />
           <Route path="ar-ap-health" element={<ArApHealth />} />
           <Route path="compliance-snapshot" element={<ComplianceSnapshot />} />
-          <Route path="*" element={<Navigate to="executive-overview" replace />} />
+          <Route path="*" element={<Navigate to="/reports/executive-overview" replace />} />
         </Route>
         <Route path="bi" element={isLoggedIn ? <UnderDevelopment /> : <Navigate to="/login" replace />} />
         <Route path="settings" element={isLoggedIn ? <UnderDevelopment /> : <Navigate to="/login" replace />} />

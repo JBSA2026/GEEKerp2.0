@@ -708,7 +708,10 @@ def export_approvals(
     status_filter: Optional[str] = Query(None, alias="status"),
     entity: Optional[str] = Query(None),
 ):
-    rows = list_approvals(search=None, request_type=request_type, status_filter=status_filter, entity=entity, approver_id=None)
+    rows = list_approvals(
+        search=None, request_type=request_type, status_filter=status_filter, entity=entity,
+        approver_id=None, reference_module=None, reference_id=None,
+    )
     fields = [
         "approval_id", "request_type", "entity", "reference_module", "reference_number",
         "requestor_name", "department", "amount", "approver_name", "status",

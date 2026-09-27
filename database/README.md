@@ -99,15 +99,9 @@ These choices come from the code's behavior, since the original database wasn't 
 If you ever get access to the original Supabase project, compare it with this schema;
 the original's exact types and constraints would be more authoritative.
 
-## Existing code bugs found during testing (not fixed here)
+## Python version
 
-These come from the backend code, not the database:
-
-- `routers/general_ledger.py`: `RemarksUpdate` is used before it is defined, so the
-  interactive API docs (`/docs`, `/openapi.json`) fail to load.
-- `routers/tax_reminders.py`: `GET /tax/reminders/notifications` is caught by
-  `GET /tax/reminders/{reminder_id}` and returns an error.
-- `routers/workflow_approval.py`: `GET /workflow-approval/export` calls another endpoint
-  function directly, so it passes placeholder values as filters and fails.
-- The backend needs Python 3.14 exactly as `pyproject.toml` says: it doesn't import
-  on 3.13 (deferred annotations) or on the 3.14 release candidates.
+The backend needs a **final** Python 3.14 release, as `pyproject.toml` says. It doesn't
+import on 3.13 (it relies on 3.14's deferred annotations) or on the 3.14 release
+candidates. If `uv` picks a release candidate, run `uv python install 3.14` with an
+up-to-date `uv`, or install Python 3.14 from python.org.

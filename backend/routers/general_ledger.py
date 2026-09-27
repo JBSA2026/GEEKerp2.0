@@ -61,6 +61,10 @@ class AccountUpdate(BaseModel):
     is_active: Optional[bool] = None
 
 
+class RemarksUpdate(BaseModel):
+    remarks: Optional[str] = None
+
+
 class JournalLineInput(BaseModel):
     account_id: int
     description: Optional[str] = None

@@ -23,6 +23,8 @@ export const TAX_TABS = [
   { id: 'vat', label: 'VAT Summary' },
   { id: 'wht', label: 'WHT / EWT' },
   { id: 'reminders', label: 'Reminders' },
+  { id: 'deadlines', label: 'Filing Deadlines' },
+  { id: 'codes', label: 'Tax Codes' },
 ]
 
 // ─── Formatters ─────────────────────────────────────────────────────────────

@@ -17,12 +17,21 @@ Endpoints:
 
 from datetime import date, datetime, timedelta
 from typing import Optional
+from uuid import UUID
 
 from fastapi import APIRouter, HTTPException, Query, Request
 from pydantic import BaseModel, field_validator
 
 from database import supabase
 from middleware.audit_middleware import _extract_jwt_claims, write_audit_log
+
+def _require_uuid(value: str, label: str) -> str:
+    """Tax calendar/reminder/notification IDs are UUIDs; anything else can't exist."""
+    try:
+        return str(UUID(str(value)))
+    except ValueError:
+        raise HTTPException(status_code=404, detail=f"{label} not found")
+
 
 router = APIRouter(prefix="/tax/reminders", tags=["tax-reminders"])
 
@@ -343,6 +352,7 @@ def list_tax_calendar(
 @router.patch("/calendar/{calendar_id}")
 def update_tax_calendar(calendar_id: str, request: Request, payload: TaxCalendarUpdate):
     """Update a calendar entry (extension override, deactivate, etc.)."""
+    calendar_id = _require_uuid(calendar_id, "Calendar entry")
     _, performed_by = _extract_jwt_claims(request)
     updates = payload.model_dump(exclude_unset=True)
     if not updates:
@@ -550,9 +560,47 @@ def reminder_summary(entity: Optional[str] = Query(None)):
     return summary
 
 
+# ═══════════════════════════════════════════════════════════════════════════════
+# Notification Log Endpoints
+# ═══════════════════════════════════════════════════════════════════════════════
+
+@router.get("/notifications")
+def list_reminder_notifications(
+    unread_only: bool = Query(False),
+    limit: int = Query(50),
+):
+    """Get tax reminder notification log entries."""
+    q = supabase.table("tax_reminder_logs").select("*")
+    if unread_only:
+        q = q.eq("is_read", False)
+    return q.order("created_at", desc=True).limit(limit).execute().data or []
+
+
+@router.patch("/notifications/{log_id}/read")
+def mark_notification_read(log_id: str):
+    """Mark a notification as read."""
+    log_id = _require_uuid(log_id, "Notification")
+    res = supabase.table("tax_reminder_logs").update({
+        "is_read": True, "read_at": datetime.utcnow().isoformat(),
+    }).eq("id", log_id).execute()
+    if not res.data:
+        raise HTTPException(status_code=404, detail="Notification not found")
+    return res.data[0]
+
+
+@router.post("/notifications/mark-all-read")
+def mark_all_notifications_read(request: Request):
+    """Mark all unread tax notifications as read."""
+    supabase.table("tax_reminder_logs").update({
+        "is_read": True, "read_at": datetime.utcnow().isoformat(),
+    }).eq("is_read", False).execute()
+    return {"message": "All notifications marked as read"}
+
+
 @router.get("/{reminder_id}")
 def get_reminder(reminder_id: str):
     """Get a single reminder with validation check."""
+    reminder_id = _require_uuid(reminder_id, "Reminder")
     reminder = supabase.table("tax_reminders").select("*").eq("id", reminder_id).execute().data
     if not reminder:
         raise HTTPException(status_code=404, detail="Reminder not found")
@@ -568,6 +616,7 @@ def get_reminder(reminder_id: str):
 @router.patch("/{reminder_id}")
 def update_reminder(reminder_id: str, request: Request, payload: ReminderUpdate):
     """Update a reminder's status, assignment, or completion data."""
+    reminder_id = _require_uuid(reminder_id, "Reminder")
     _, performed_by = _extract_jwt_claims(request)
     updates = payload.model_dump(exclude_unset=True)
     if not updates:
@@ -595,6 +644,7 @@ def update_reminder(reminder_id: str, request: Request, payload: ReminderUpdate)
 @router.post("/{reminder_id}/validate")
 def validate_reminder(reminder_id: str):
     """Run pre-filing validation checks on a reminder."""
+    reminder_id = _require_uuid(reminder_id, "Reminder")
     reminder = supabase.table("tax_reminders").select("*").eq("id", reminder_id).execute().data
     if not reminder:
         raise HTTPException(status_code=404, detail="Reminder not found")
@@ -650,39 +700,3 @@ def sync_bir_form_completions(request: Request):
             request=request,
         )
     return {"synced_forms": len(filed_forms), "auto_completed": matched}
-
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# Notification Log Endpoints
-# ═══════════════════════════════════════════════════════════════════════════════
-
-@router.get("/notifications")
-def list_reminder_notifications(
-    unread_only: bool = Query(False),
-    limit: int = Query(50),
-):
-    """Get tax reminder notification log entries."""
-    q = supabase.table("tax_reminder_logs").select("*")
-    if unread_only:
-        q = q.eq("is_read", False)
-    return q.order("created_at", desc=True).limit(limit).execute().data or []
-
-
-@router.patch("/notifications/{log_id}/read")
-def mark_notification_read(log_id: str):
-    """Mark a notification as read."""
-    res = supabase.table("tax_reminder_logs").update({
-        "is_read": True, "read_at": datetime.utcnow().isoformat(),
-    }).eq("id", log_id).execute()
-    if not res.data:
-        raise HTTPException(status_code=404, detail="Notification not found")
-    return res.data[0]
-
-
-@router.post("/notifications/mark-all-read")
-def mark_all_notifications_read(request: Request):
-    """Mark all unread tax notifications as read."""
-    supabase.table("tax_reminder_logs").update({
-        "is_read": True, "read_at": datetime.utcnow().isoformat(),
-    }).eq("is_read", False).execute()
-    return {"message": "All notifications marked as read"}

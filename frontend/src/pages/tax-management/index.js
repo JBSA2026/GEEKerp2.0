@@ -5,6 +5,8 @@ export { TaxVATSummary } from './TaxVATSummary'
 export { TaxWHTSummary } from './TaxWHTSummary'
 
 export { TaxReminders } from './TaxReminders'
+export { TaxFilingDeadlines } from './TaxFilingDeadlines'
+export { TaxCodes } from './TaxCodes'
 export { Form2307 } from './forms/2307'
 export { Form2307Detail } from './forms/2307'
 export { Form2307Print } from './forms/2307'

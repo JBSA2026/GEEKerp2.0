@@ -989,7 +989,7 @@ def _recalculate_0619e_from_payments(form_record_id: int, entity: str, period_fr
     supabase.table("bir_forms").update({"form_data": form_data}).eq("form_record_id", form_record_id).execute()
 
 
-
+def generate_or_update_0619e_for_bill(bill_id: int, bill: dict):
     """Auto-generate or update a DRAFT 0619-E when an AP bill with EWT is confirmed.
 
     Called from the AP module when a bill is confirmed.

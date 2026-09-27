@@ -3,7 +3,7 @@
 Manages outbound deliveries to clients — partial or full — against Sales Orders.
 Tracks preparation, transit, delivery confirmation, and client acknowledgment.
 """
-from fastapi import APIRouter, HTTPException, Query, Request, status
+from fastapi import APIRouter, HTTPException, Query, Request, UploadFile, status
 from pydantic import BaseModel
 from typing import Optional
 from datetime import date
@@ -268,7 +268,7 @@ def update_delivery_note_status(delivery_note_id: int, request: Request, payload
 
 
 @router.post("/{delivery_note_id}/attachment", status_code=status.HTTP_200_OK)
-async def upload_delivery_attachment(delivery_note_id: int, request: Request, file: "UploadFile" = None):
+async def upload_delivery_attachment(delivery_note_id: int, request: Request, file: UploadFile = None):
     """Upload proof of delivery attachment (signed DR, photo, etc.)."""
     from fastapi import File, UploadFile as _UploadFile
     import uuid
