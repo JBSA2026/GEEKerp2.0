@@ -1,0 +1,18 @@
+- generic [ref=e2]:
+  - region "Notifications alt+T"
+  - main [ref=e3]:
+    - generic [ref=e5]:
+      - img "GEEK" [ref=e7]
+      - paragraph [ref=e8]: Sign in to continue.
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: Email
+          - textbox "Email" [ref=e16]:
+            - /placeholder: you@company.com
+        - generic [ref=e17]:
+          - generic [ref=e18]: Password
+          - generic [ref=e19]:
+            - textbox "Password Show password" [ref=e24]:
+              - /placeholder: Enter password
+            - button "Show password" [ref=e25]
+      - button "Sign in" [ref=e29] [cursor=pointer]

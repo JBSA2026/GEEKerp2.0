@@ -1,0 +1,6 @@
+export { PayrollLayout } from './PayrollLayout'
+export { PayrollDashboard } from './PayrollDashboard'
+export { PayrollEmployees } from './PayrollEmployees'
+export { PayrollGenerate } from './PayrollGenerate'
+export { PayrollHistory } from './PayrollHistory'
+export { PayrollLoans } from './PayrollLoans'

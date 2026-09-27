@@ -1,0 +1,561 @@
+- generic [ref=e2]:
+  - region "Notifications alt+T"
+  - generic [ref=e32]:
+    - complementary [ref=e33]:
+      - img "GEEK Group of Companies" [ref=e35]
+      - navigation [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: Core Modules
+          - list [ref=e40]:
+            - listitem [ref=e41]:
+              - link "Dashboard" [ref=e42] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e49]:
+              - link "Master Data" [ref=e50] [cursor=pointer]:
+                - /url: /masterdata
+            - listitem [ref=e56]:
+              - link "CRM / Sales" [ref=e57] [cursor=pointer]:
+                - /url: /crm
+            - listitem [ref=e63]:
+              - link "Quotation" [ref=e64] [cursor=pointer]:
+                - /url: /quotation
+            - listitem [ref=e69]:
+              - link "Purchasing" [ref=e70] [cursor=pointer]:
+                - /url: /purchasing
+            - listitem [ref=e75]:
+              - link "Inventory" [ref=e76] [cursor=pointer]:
+                - /url: /inventory
+            - listitem [ref=e82]:
+              - link "Projects" [ref=e83] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e87]:
+              - link "Accounts Receivable" [ref=e88] [cursor=pointer]:
+                - /url: /accounts-receivable
+            - listitem [ref=e93]:
+              - link "Accounts Payable" [ref=e94] [cursor=pointer]:
+                - /url: /accounts-payable
+            - listitem [ref=e98]:
+              - link "General Ledger" [ref=e99] [cursor=pointer]:
+                - /url: /general-ledger
+        - generic [ref=e103]:
+          - paragraph [ref=e104]: Additional Modules
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - link "HR Management" [ref=e107] [cursor=pointer]:
+                - /url: /hr
+            - listitem [ref=e114]:
+              - link "Payroll Management" [ref=e115] [cursor=pointer]:
+                - /url: /payroll
+            - listitem [ref=e119]:
+              - link "Tax Management" [ref=e120] [cursor=pointer]:
+                - /url: /tax
+            - listitem [ref=e124]:
+              - link "LOA Retrieval" [ref=e125] [cursor=pointer]:
+                - /url: /loa
+            - listitem [ref=e130]:
+              - link "Document Management" [ref=e131] [cursor=pointer]:
+                - /url: /documents
+            - listitem [ref=e137]:
+              - link "Workflow Approval" [ref=e138] [cursor=pointer]:
+                - /url: /workflow
+            - listitem [ref=e144]:
+              - link "Service Management" [ref=e145] [cursor=pointer]:
+                - /url: /service
+            - listitem [ref=e149]:
+              - link "Data Center Projects" [ref=e150] [cursor=pointer]:
+                - /url: /datacenter
+            - listitem [ref=e155]:
+              - link "LMS Management" [ref=e156] [cursor=pointer]:
+                - /url: /lms
+            - listitem [ref=e161]:
+              - link "Executive AI Assistant" [ref=e162] [cursor=pointer]:
+                - /url: /ai
+            - listitem [ref=e167]:
+              - link "OJT & Internship" [ref=e168] [cursor=pointer]:
+                - /url: /ojt
+            - listitem [ref=e173]:
+              - link "Commission Management" [ref=e174] [cursor=pointer]:
+                - /url: /commission
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: Reports & Analytics
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - link "Reports" [ref=e183] [cursor=pointer]:
+                - /url: /reports
+            - listitem [ref=e187]:
+              - link "BI Analytics" [ref=e188] [cursor=pointer]:
+                - /url: /bi
+        - generic [ref=e193]:
+          - paragraph [ref=e194]: System
+          - list [ref=e195]:
+            - listitem [ref=e196]:
+              - link "Administration" [ref=e197] [cursor=pointer]:
+                - /url: /administration
+            - listitem [ref=e201]:
+              - link "System Settings" [ref=e202] [cursor=pointer]:
+                - /url: /settings
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - generic [ref=e210]: SA
+          - generic [ref=e211]:
+            - paragraph [ref=e212]: Super Admin
+            - paragraph [ref=e213]: SUPER ADMIN
+        - button "Logout" [ref=e214]
+    - generic [ref=e555]:
+      - generic [ref=e556]:
+        - heading "Tax Management" [level=1] [ref=e558]
+        - button "All Companies" [ref=e561]
+      - generic [ref=e566]:
+        - button "Dashboard" [ref=e567]
+        - button "BIR Forms" [active] [ref=e568]
+        - button "VAT Summary" [ref=e569]
+        - button "WHT / EWT" [ref=e570]
+        - button "Filing Deadlines" [ref=e571]
+        - button "Tax Codes" [ref=e572]
+      - generic [ref=e1178]:
+        - generic [ref=e1179]:
+          - heading "BIR Forms" [level=2] [ref=e1180]
+          - generic [ref=e1181]:
+            - button "Close Period" [ref=e1182] [cursor=pointer]
+            - button "Manual" [ref=e1187] [cursor=pointer]
+            - button [ref=e1190] [cursor=pointer]
+        - generic [ref=e1196]:
+          - textbox "Search forms..." [ref=e1201]
+          - combobox [ref=e1202]:
+            - option "All Types" [selected]
+            - option "2307"
+            - option "0619E"
+            - option "1601C"
+            - option "1601EQ"
+            - option "2550Q"
+            - option "2316"
+            - option "1600VT"
+            - option "1702Q"
+            - option "1702"
+            - option "1604E"
+            - option "0605"
+          - combobox [ref=e1203]:
+            - option "All Statuses" [selected]
+            - option "DRAFT"
+            - option "FINALIZED"
+            - option "PENDING APPROVAL"
+          - combobox [ref=e1204]:
+            - option "All Months" [selected]
+            - option "Jan"
+            - option "Feb"
+            - option "Mar"
+            - option "Apr"
+            - option "May"
+            - option "Jun"
+            - option "Jul"
+            - option "Aug"
+            - option "Sep"
+            - option "Oct"
+            - option "Nov"
+            - option "Dec"
+          - combobox [ref=e1205]:
+            - option "Year" [selected]
+            - option "2026"
+            - option "2025"
+            - option "2024"
+        - generic [ref=e1206]:
+          - table [ref=e1207]:
+            - rowgroup [ref=e1208]:
+              - row [ref=e1209]:
+                - columnheader "Form Code" [ref=e1210]
+                - columnheader "Form Type" [ref=e1211]
+                - columnheader "Entity" [ref=e1212]
+                - columnheader "Period" [ref=e1213]
+                - columnheader "Payee / Subject" [ref=e1214]
+                - columnheader "Amount" [ref=e1215]
+                - columnheader "Status" [ref=e1216]
+                - columnheader "Created" [ref=e1217]
+            - rowgroup [ref=e1218]:
+              - row [ref=e1219] [cursor=pointer]:
+                - cell "EXP-2026-BIR1604E-0001" [ref=e1220]
+                - cell [ref=e1221]
+                - cell "Expedia" [ref=e1226]
+                - cell "2026-01-01 to 2026-12-31" [ref=e1227]
+                - cell "—" [ref=e1228]
+                - cell "—" [ref=e1229]
+                - cell [ref=e1230]
+                - cell "Jul 19, 2026" [ref=e1235]
+              - row [ref=e1236] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-MAX1" [ref=e1237]
+                - cell [ref=e1238]
+                - cell "Expedia" [ref=e1243]
+                - cell "2026-10-01 to 2026-12-31" [ref=e1244]
+                - cell "PHILIPPINE NATIONAL CONSTRUCTION & HEAVY EQUIPMENT MANUFACTURING CORPORATION OF THE VISAYAS AND MINDANAO" [ref=e1245]
+                - cell "—" [ref=e1246]
+                - cell [ref=e1247]
+                - cell "Jul 19, 2026" [ref=e1252]
+              - row [ref=e1253] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-0099" [ref=e1254]
+                - cell [ref=e1255]
+                - cell "Expedia" [ref=e1260]
+                - cell "2026-01-01 to 2026-03-31" [ref=e1261]
+                - cell "ACME CONSTRUCTION & DEVELOPMENT CORPORATION" [ref=e1262]
+                - cell "—" [ref=e1263]
+                - cell [ref=e1264]
+                - cell "Jul 19, 2026" [ref=e1269]
+              - row [ref=e1270] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-0006" [ref=e1271]
+                - cell [ref=e1272]
+                - cell "—" [ref=e1277]
+                - cell "2026-07-01 to 2026-09-30" [ref=e1278]
+                - cell "KYRIOS SOLUTIONS INC." [ref=e1279]
+                - cell "—" [ref=e1280]
+                - cell [ref=e1281]
+                - cell "Jul 17, 2026" [ref=e1286]
+              - row [ref=e1287] [cursor=pointer]:
+                - cell "KSI-2026-BIR1702Q-0001" [ref=e1288]
+                - cell [ref=e1289]
+                - cell "KSI" [ref=e1294]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1295]
+                - cell "—" [ref=e1296]
+                - cell "—" [ref=e1297]
+                - cell [ref=e1298]
+                - cell "Jul 16, 2026" [ref=e1303]
+              - row [ref=e1304] [cursor=pointer]:
+                - cell "KSI-2026-BIR2550Q-0001" [ref=e1305]
+                - cell [ref=e1306]
+                - cell "KSI" [ref=e1311]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1312]
+                - cell "—" [ref=e1313]
+                - cell "—" [ref=e1314]
+                - cell [ref=e1315]
+                - cell "Jul 16, 2026" [ref=e1320]
+              - row [ref=e1321] [cursor=pointer]:
+                - cell "KSI-2026-BIR1601EQ-0001" [ref=e1322]
+                - cell [ref=e1323]
+                - cell "KSI" [ref=e1328]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1329]
+                - cell "—" [ref=e1330]
+                - cell "—" [ref=e1331]
+                - cell [ref=e1332]
+                - cell "Jul 16, 2026" [ref=e1337]
+              - row [ref=e1338] [cursor=pointer]:
+                - cell "KSI-2026-BIR1600VT-0002" [ref=e1339]
+                - cell [ref=e1340]
+                - cell "KSI" [ref=e1345]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1346]
+                - cell "—" [ref=e1347]
+                - cell "—" [ref=e1348]
+                - cell [ref=e1349]
+                - cell "Jul 16, 2026" [ref=e1354]
+              - row [ref=e1355] [cursor=pointer]:
+                - cell "KSI-2026-BIR1601C-0002" [ref=e1356]
+                - cell [ref=e1357]
+                - cell "KSI" [ref=e1362]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1363]
+                - cell "—" [ref=e1364]
+                - cell "—" [ref=e1365]
+                - cell [ref=e1366]
+                - cell "Jul 16, 2026" [ref=e1371]
+              - row [ref=e1372] [cursor=pointer]:
+                - cell "KSI-2026-BIR0619E-0002" [ref=e1373]
+                - cell [ref=e1374]
+                - cell "KSI" [ref=e1379]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1380]
+                - cell "—" [ref=e1381]
+                - cell "—" [ref=e1382]
+                - cell [ref=e1383]
+                - cell "Jul 16, 2026" [ref=e1388]
+              - row [ref=e1389] [cursor=pointer]:
+                - cell "EXG-2026-BIR1702Q-0001" [ref=e1390]
+                - cell [ref=e1391]
+                - cell "Exigent" [ref=e1396]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1397]
+                - cell "—" [ref=e1398]
+                - cell "—" [ref=e1399]
+                - cell [ref=e1400]
+                - cell "Jul 16, 2026" [ref=e1405]
+              - row [ref=e1406] [cursor=pointer]:
+                - cell "EXG-2026-BIR2550Q-0001" [ref=e1407]
+                - cell [ref=e1408]
+                - cell "Exigent" [ref=e1413]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1414]
+                - cell "—" [ref=e1415]
+                - cell "—" [ref=e1416]
+                - cell [ref=e1417]
+                - cell "Jul 16, 2026" [ref=e1422]
+              - row [ref=e1423] [cursor=pointer]:
+                - cell "EXG-2026-BIR1601EQ-0001" [ref=e1424]
+                - cell [ref=e1425]
+                - cell "Exigent" [ref=e1430]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1431]
+                - cell "—" [ref=e1432]
+                - cell "—" [ref=e1433]
+                - cell [ref=e1434]
+                - cell "Jul 16, 2026" [ref=e1439]
+              - row [ref=e1440] [cursor=pointer]:
+                - cell "EXG-2026-BIR1600VT-0002" [ref=e1441]
+                - cell [ref=e1442]
+                - cell "Exigent" [ref=e1447]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1448]
+                - cell "—" [ref=e1449]
+                - cell "—" [ref=e1450]
+                - cell [ref=e1451]
+                - cell "Jul 16, 2026" [ref=e1456]
+              - row [ref=e1457] [cursor=pointer]:
+                - cell "EXG-2026-BIR1601C-0002" [ref=e1458]
+                - cell [ref=e1459]
+                - cell "Exigent" [ref=e1464]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1465]
+                - cell "—" [ref=e1466]
+                - cell "—" [ref=e1467]
+                - cell [ref=e1468]
+                - cell "Jul 16, 2026" [ref=e1473]
+              - row [ref=e1474] [cursor=pointer]:
+                - cell "EXG-2026-BIR0619E-0002" [ref=e1475]
+                - cell [ref=e1476]
+                - cell "Exigent" [ref=e1481]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1482]
+                - cell "—" [ref=e1483]
+                - cell "—" [ref=e1484]
+                - cell [ref=e1485]
+                - cell "Jul 16, 2026" [ref=e1490]
+              - row [ref=e1491] [cursor=pointer]:
+                - cell "GLB-2026-BIR1702Q-0001" [ref=e1492]
+                - cell [ref=e1493]
+                - cell "GreatnessLab" [ref=e1498]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1499]
+                - cell "—" [ref=e1500]
+                - cell "—" [ref=e1501]
+                - cell [ref=e1502]
+                - cell "Jul 16, 2026" [ref=e1507]
+              - row [ref=e1508] [cursor=pointer]:
+                - cell "KSI-2026-BIR1600VT-0001" [ref=e1509]
+                - cell [ref=e1510]
+                - cell "KSI" [ref=e1515]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1516]
+                - cell "—" [ref=e1517]
+                - cell "—" [ref=e1518]
+                - cell [ref=e1519]
+                - cell "Jul 16, 2026" [ref=e1524]
+              - row [ref=e1525] [cursor=pointer]:
+                - cell "GLB-2026-BIR2550Q-0001" [ref=e1526]
+                - cell [ref=e1527]
+                - cell "GreatnessLab" [ref=e1532]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1533]
+                - cell "—" [ref=e1534]
+                - cell "—" [ref=e1535]
+                - cell [ref=e1536]
+                - cell "Jul 16, 2026" [ref=e1541]
+              - row [ref=e1542] [cursor=pointer]:
+                - cell "KSI-2026-BIR1601C-0001" [ref=e1543]
+                - cell [ref=e1544]
+                - cell "KSI" [ref=e1549]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1550]
+                - cell "—" [ref=e1551]
+                - cell "—" [ref=e1552]
+                - cell [ref=e1553]
+                - cell "Jul 16, 2026" [ref=e1558]
+              - row [ref=e1559] [cursor=pointer]:
+                - cell "GLB-2026-BIR1601EQ-0001" [ref=e1560]
+                - cell [ref=e1561]
+                - cell "GreatnessLab" [ref=e1566]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1567]
+                - cell "—" [ref=e1568]
+                - cell "—" [ref=e1569]
+                - cell [ref=e1570]
+                - cell "Jul 16, 2026" [ref=e1575]
+              - row [ref=e1576] [cursor=pointer]:
+                - cell "EXG-2026-BIR1600VT-0001" [ref=e1577]
+                - cell [ref=e1578]
+                - cell "Exigent" [ref=e1583]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1584]
+                - cell "—" [ref=e1585]
+                - cell "—" [ref=e1586]
+                - cell [ref=e1587]
+                - cell "Jul 16, 2026" [ref=e1592]
+              - row [ref=e1593] [cursor=pointer]:
+                - cell "KSI-2026-BIR0619E-0001" [ref=e1594]
+                - cell [ref=e1595]
+                - cell "KSI" [ref=e1600]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1601]
+                - cell "—" [ref=e1602]
+                - cell "—" [ref=e1603]
+                - cell [ref=e1604]
+                - cell "Jul 16, 2026" [ref=e1609]
+              - row [ref=e1610] [cursor=pointer]:
+                - cell "GLB-2026-BIR1600VT-0002" [ref=e1611]
+                - cell [ref=e1612]
+                - cell "GreatnessLab" [ref=e1617]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1618]
+                - cell "—" [ref=e1619]
+                - cell "—" [ref=e1620]
+                - cell [ref=e1621]
+                - cell "Jul 16, 2026" [ref=e1626]
+              - row [ref=e1627] [cursor=pointer]:
+                - cell "EXG-2026-BIR1601C-0001" [ref=e1628]
+                - cell [ref=e1629]
+                - cell "Exigent" [ref=e1634]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1635]
+                - cell "—" [ref=e1636]
+                - cell "—" [ref=e1637]
+                - cell [ref=e1638]
+                - cell "Jul 16, 2026" [ref=e1643]
+              - row [ref=e1644] [cursor=pointer]:
+                - cell "GLB-2026-BIR1600VT-0001" [ref=e1645]
+                - cell [ref=e1646]
+                - cell "GreatnessLab" [ref=e1651]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1652]
+                - cell "—" [ref=e1653]
+                - cell "—" [ref=e1654]
+                - cell [ref=e1655]
+                - cell "Jul 16, 2026" [ref=e1660]
+              - row [ref=e1661] [cursor=pointer]:
+                - cell "EXG-2026-BIR0619E-0001" [ref=e1662]
+                - cell [ref=e1663]
+                - cell "Exigent" [ref=e1668]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1669]
+                - cell "—" [ref=e1670]
+                - cell "—" [ref=e1671]
+                - cell [ref=e1672]
+                - cell "Jul 16, 2026" [ref=e1677]
+              - row [ref=e1678] [cursor=pointer]:
+                - cell "GLB-2026-BIR1601C-0002" [ref=e1679]
+                - cell [ref=e1680]
+                - cell "GreatnessLab" [ref=e1685]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1686]
+                - cell "—" [ref=e1687]
+                - cell "—" [ref=e1688]
+                - cell [ref=e1689]
+                - cell "Jul 16, 2026" [ref=e1694]
+              - row [ref=e1695] [cursor=pointer]:
+                - cell "GLB-2026-BIR1601C-0001" [ref=e1696]
+                - cell [ref=e1697]
+                - cell "GreatnessLab" [ref=e1702]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1703]
+                - cell "—" [ref=e1704]
+                - cell "—" [ref=e1705]
+                - cell [ref=e1706]
+                - cell "Jul 16, 2026" [ref=e1711]
+              - row [ref=e1712] [cursor=pointer]:
+                - cell "GLB-2026-BIR0619E-0002" [ref=e1713]
+                - cell [ref=e1714]
+                - cell "GreatnessLab" [ref=e1719]
+                - cell "2026-04-01 to 2026-04-30" [ref=e1720]
+                - cell "—" [ref=e1721]
+                - cell "—" [ref=e1722]
+                - cell [ref=e1723]
+                - cell "Jul 16, 2026" [ref=e1728]
+              - row [ref=e1729] [cursor=pointer]:
+                - cell "GLB-2026-BIR0619E-0001" [ref=e1730]
+                - cell [ref=e1731]
+                - cell "GreatnessLab" [ref=e1736]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1737]
+                - cell "—" [ref=e1738]
+                - cell "—" [ref=e1739]
+                - cell [ref=e1740]
+                - cell "Jul 16, 2026" [ref=e1745]
+              - row [ref=e1746] [cursor=pointer]:
+                - cell "EXP-2026-BIR1702Q-0001" [ref=e1747]
+                - cell [ref=e1748]
+                - cell "Expedia" [ref=e1753]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1754]
+                - cell "—" [ref=e1755]
+                - cell "—" [ref=e1756]
+                - cell [ref=e1757]
+                - cell "Jul 16, 2026" [ref=e1762]
+              - row [ref=e1763] [cursor=pointer]:
+                - cell "EXP-2026-BIR2550Q-0001" [ref=e1764]
+                - cell [ref=e1765]
+                - cell "Expedia" [ref=e1770]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1771]
+                - cell "—" [ref=e1772]
+                - cell "—" [ref=e1773]
+                - cell [ref=e1774]
+                - cell "Jul 16, 2026" [ref=e1779]
+              - row [ref=e1780] [cursor=pointer]:
+                - cell "EXP-2026-BIR1601EQ-0001" [ref=e1781]
+                - cell [ref=e1782]
+                - cell "Expedia" [ref=e1787]
+                - cell "2026-04-01 to 2026-06-30" [ref=e1788]
+                - cell "—" [ref=e1789]
+                - cell "—" [ref=e1790]
+                - cell [ref=e1791]
+                - cell "Jul 16, 2026" [ref=e1796]
+              - row [ref=e1797] [cursor=pointer]:
+                - cell "EXP-2026-BIR1600VT-0001" [ref=e1798]
+                - cell [ref=e1799]
+                - cell "Expedia" [ref=e1804]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1805]
+                - cell "—" [ref=e1806]
+                - cell "—" [ref=e1807]
+                - cell [ref=e1808]
+                - cell "Jul 16, 2026" [ref=e1813]
+              - row [ref=e1814] [cursor=pointer]:
+                - cell "EXP-2026-BIR1601C-0001" [ref=e1815]
+                - cell [ref=e1816]
+                - cell "Expedia" [ref=e1821]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1822]
+                - cell "—" [ref=e1823]
+                - cell "—" [ref=e1824]
+                - cell [ref=e1825]
+                - cell "Jul 16, 2026" [ref=e1830]
+              - row [ref=e1831] [cursor=pointer]:
+                - cell "EXP-2026-BIR0619E-0001" [ref=e1832]
+                - cell [ref=e1833]
+                - cell "Expedia" [ref=e1838]
+                - cell "2026-06-01 to 2026-06-30" [ref=e1839]
+                - cell "—" [ref=e1840]
+                - cell "—" [ref=e1841]
+                - cell [ref=e1842]
+                - cell "Jul 16, 2026" [ref=e1847]
+              - row [ref=e1848] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-0005" [ref=e1849]
+                - cell [ref=e1850]
+                - cell "Expedia" [ref=e1855]
+                - cell "2026-07-01 to 2026-09-30" [ref=e1856]
+                - cell "EXPEDIA SOLUTIONS SPECIALIST INC." [ref=e1857]
+                - cell "—" [ref=e1858]
+                - cell [ref=e1859]
+                - cell "Jul 13, 2026" [ref=e1864]
+              - row [ref=e1865] [cursor=pointer]:
+                - cell "GLB-2026-BIR2307-0001" [ref=e1866]
+                - cell [ref=e1867]
+                - cell "greatnesslab" [ref=e1872]
+                - cell "2026-07-01 to 2026-09-30" [ref=e1873]
+                - cell "—" [ref=e1874]
+                - cell "—" [ref=e1875]
+                - cell [ref=e1876]
+                - cell "Jul 13, 2026" [ref=e1881]
+              - row [ref=e1882] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-0004" [ref=e1883]
+                - cell [ref=e1884]
+                - cell "—" [ref=e1889]
+                - cell "2026-07-01 to 2026-09-30" [ref=e1890]
+                - cell "—" [ref=e1891]
+                - cell "—" [ref=e1892]
+                - cell [ref=e1893]
+                - cell "Jul 12, 2026" [ref=e1898]
+              - row [ref=e1899] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-0003" [ref=e1900]
+                - cell [ref=e1901]
+                - cell "—" [ref=e1906]
+                - cell "2026-07-01 to 2026-09-30" [ref=e1907]
+                - cell "EXPEDIA SOLUTIONS SPECIALIST INC." [ref=e1908]
+                - cell "—" [ref=e1909]
+                - cell [ref=e1910]
+                - cell "Jul 12, 2026" [ref=e1915]
+              - row [ref=e1916] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-0002" [ref=e1917]
+                - cell [ref=e1918]
+                - cell "Expedia" [ref=e1923]
+                - cell "2026-07-01 to 2026-09-30" [ref=e1924]
+                - cell "EXPEDIA SOLUTIONS SPECIALIST INC." [ref=e1925]
+                - cell "—" [ref=e1926]
+                - cell [ref=e1927]
+                - cell "Jul 12, 2026" [ref=e1932]
+              - row [ref=e1933] [cursor=pointer]:
+                - cell "EXP-2026-BIR2307-0001" [ref=e1934]
+                - cell [ref=e1935]
+                - cell "Expedia" [ref=e1940]
+                - cell "2026-07-01 to 2026-09-30" [ref=e1941]
+                - cell "EXPEDIA SOLUTIONS SPECIALIST INC." [ref=e1942]
+                - cell "—" [ref=e1943]
+                - cell [ref=e1944]
+                - cell "Jul 12, 2026" [ref=e1949]
+          - generic [ref=e1950]: Showing 43 forms

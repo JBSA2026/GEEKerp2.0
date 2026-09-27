@@ -1,0 +1,6 @@
+export { OverviewTab } from './OverviewTab'
+export { BudgetTab } from './BudgetTab'
+export { MilestonesTab } from './MilestonesTab'
+export { TasksTab } from './TasksTab'
+export { MaterialsTab } from './MaterialsTab'
+export { DocumentsTab } from './DocumentsTab'

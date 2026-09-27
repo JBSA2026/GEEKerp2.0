@@ -1,0 +1,356 @@
+- generic [ref=e2]:
+  - region "Notifications alt+T"
+  - generic [ref=e32]:
+    - complementary [ref=e33]:
+      - img "GEEK Group of Companies" [ref=e35]
+      - navigation [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: Core Modules
+          - list [ref=e40]:
+            - listitem [ref=e41]:
+              - link "Dashboard" [ref=e42] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e49]:
+              - link "Master Data" [ref=e50] [cursor=pointer]:
+                - /url: /masterdata
+            - listitem [ref=e56]:
+              - link "CRM / Sales" [ref=e57] [cursor=pointer]:
+                - /url: /crm
+            - listitem [ref=e63]:
+              - link "Quotation" [ref=e64] [cursor=pointer]:
+                - /url: /quotation
+            - listitem [ref=e69]:
+              - link "Purchasing" [ref=e70] [cursor=pointer]:
+                - /url: /purchasing
+            - listitem [ref=e75]:
+              - link "Inventory" [ref=e76] [cursor=pointer]:
+                - /url: /inventory
+            - listitem [ref=e82]:
+              - link "Projects" [ref=e83] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e87]:
+              - link "Accounts Receivable" [ref=e88] [cursor=pointer]:
+                - /url: /accounts-receivable
+            - listitem [ref=e93]:
+              - link "Accounts Payable" [ref=e94] [cursor=pointer]:
+                - /url: /accounts-payable
+            - listitem [ref=e98]:
+              - link "General Ledger" [ref=e99] [cursor=pointer]:
+                - /url: /general-ledger
+        - generic [ref=e103]:
+          - paragraph [ref=e104]: Additional Modules
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - link "HR Management" [ref=e107] [cursor=pointer]:
+                - /url: /hr
+            - listitem [ref=e114]:
+              - link "Payroll Management" [ref=e115] [cursor=pointer]:
+                - /url: /payroll
+            - listitem [ref=e119]:
+              - link "Tax Management" [ref=e120] [cursor=pointer]:
+                - /url: /tax
+            - listitem [ref=e124]:
+              - link "LOA Retrieval" [ref=e125] [cursor=pointer]:
+                - /url: /loa
+            - listitem [ref=e130]:
+              - link "Document Management" [ref=e131] [cursor=pointer]:
+                - /url: /documents
+            - listitem [ref=e137]:
+              - link "Workflow Approval" [ref=e138] [cursor=pointer]:
+                - /url: /workflow
+            - listitem [ref=e144]:
+              - link "Service Management" [ref=e145] [cursor=pointer]:
+                - /url: /service
+            - listitem [ref=e149]:
+              - link "Data Center Projects" [ref=e150] [cursor=pointer]:
+                - /url: /datacenter
+            - listitem [ref=e155]:
+              - link "LMS Management" [ref=e156] [cursor=pointer]:
+                - /url: /lms
+            - listitem [ref=e161]:
+              - link "Executive AI Assistant" [ref=e162] [cursor=pointer]:
+                - /url: /ai
+            - listitem [ref=e167]:
+              - link "OJT & Internship" [ref=e168] [cursor=pointer]:
+                - /url: /ojt
+            - listitem [ref=e173]:
+              - link "Commission Management" [ref=e174] [cursor=pointer]:
+                - /url: /commission
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: Reports & Analytics
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - link "Reports" [ref=e183] [cursor=pointer]:
+                - /url: /reports
+            - listitem [ref=e187]:
+              - link "BI Analytics" [ref=e188] [cursor=pointer]:
+                - /url: /bi
+        - generic [ref=e193]:
+          - paragraph [ref=e194]: System
+          - list [ref=e195]:
+            - listitem [ref=e196]:
+              - link "Administration" [ref=e197] [cursor=pointer]:
+                - /url: /administration
+            - listitem [ref=e201]:
+              - link "System Settings" [ref=e202] [cursor=pointer]:
+                - /url: /settings
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - generic [ref=e210]: SA
+          - generic [ref=e211]:
+            - paragraph [ref=e212]: Super Admin
+            - paragraph [ref=e213]: SUPER ADMIN
+        - button "Logout" [ref=e214]
+    - generic [ref=e555]:
+      - generic [ref=e556]:
+        - heading "Tax Management" [level=1] [ref=e558]
+        - button "All Companies" [ref=e561]
+      - generic [ref=e566]:
+        - button "Dashboard" [ref=e567]
+        - button "BIR Forms" [ref=e568]
+        - button "VAT Summary" [ref=e569]
+        - button "WHT / EWT" [ref=e570]
+        - button "Filing Deadlines" [ref=e571]
+        - button "Tax Codes" [ref=e572]
+      - generic [ref=e1951]:
+        - generic [ref=e1952]:
+          - button "Back" [ref=e1953] [cursor=pointer]
+          - generic [ref=e1957]:
+            - generic [ref=e1958]: BIR 1604-E
+            - generic [ref=e1959]: Draft
+            - generic [ref=e1960]: EXP-2026-BIR1604E-0001
+            - generic [ref=e1961]: • EXPEDIA SOLUTIONS SPECIALIST INC.
+            - generic [ref=e1962]: • Year 2026
+          - button "Edit" [ref=e1963] [cursor=pointer]
+          - button "Submit for Approval" [ref=e1967] [cursor=pointer]
+          - button "Export PDF" [ref=e1971] [cursor=pointer]
+        - generic [ref=e1976]:
+          - button "Form Details" [ref=e1977]
+          - button "BIR Form View" [ref=e1981]
+          - button "History" [ref=e1985]
+        - generic [ref=e1991]:
+          - generic [ref=e1992]:
+            - button "Enable pan/drag mode" [ref=e1993]
+            - button "Print form (1:1 scale)" [ref=e1997]
+            - button "Zoom out" [ref=e2003]
+            - button "140%" [ref=e2222]
+            - button "Zoom in" [ref=e2008]
+            - button "Enter fullscreen" [ref=e2013]
+          - generic [ref=e2021]:
+            - generic [ref=e2022]:
+              - generic [ref=e2023]: "26"
+              - generic [ref=e2024]: ✓
+              - generic [ref=e2025]: "3"
+              - generic [ref=e2026]: "000"
+              - generic [ref=e2027]: "000"
+              - generic [ref=e2028]: "000"
+              - generic [ref=e2029]: "000"
+              - generic [ref=e2030]: "049"
+              - generic [ref=e2031]: EXPEDIA SOLUTIONS SPECIALIST INC.
+              - generic [ref=e2032]: UG24 Cityland Pasongtamo Tower, Calle Estacion Corner Pasongtamo St., Pio Del Pillar, Makati City, Metro Manila
+              - generic [ref=e2033]: "1230"
+              - generic [ref=e2034]: ✓
+              - generic [ref=e2035]: ✓
+              - generic [ref=e2036]: 02-8888-7777
+              - generic [ref=e2037]: tax@expedia-solutions.com.ph
+              - generic:
+                - generic [ref=e2038]: 04/15/2026
+                - generic [ref=e2039]: BPI Makati
+                - generic [ref=e2040]: TRA-2026-Q1-001
+                - generic [ref=e2041]: "125000.00"
+                - generic [ref=e2042]: "0.00"
+                - generic [ref=e2043]: "125000.00"
+              - generic:
+                - generic [ref=e2044]: 07/15/2026
+                - generic [ref=e2045]: BPI Makati
+                - generic [ref=e2046]: TRA-2026-Q2-001
+                - generic [ref=e2047]: "148000.00"
+                - generic [ref=e2048]: "0.00"
+                - generic [ref=e2049]: "148000.00"
+              - generic:
+                - generic [ref=e2050]: 10/15/2026
+                - generic [ref=e2051]: BPI Makati
+                - generic [ref=e2052]: TRA-2026-Q3-001
+                - generic [ref=e2053]: "132000.00"
+                - generic [ref=e2054]: "2500.00"
+                - generic [ref=e2055]: "134500.00"
+              - generic:
+                - generic [ref=e2056]: 01/15/2027
+                - generic [ref=e2057]: BPI Makati
+                - generic [ref=e2058]: TRA-2026-Q4-001
+                - generic [ref=e2059]: "155000.00"
+                - generic [ref=e2060]: "0.00"
+                - generic [ref=e2061]: "155000.00"
+              - generic:
+                - generic [ref=e2064]: TOTAL
+                - generic [ref=e2065]: "560000.00"
+                - generic [ref=e2066]: "2500.00"
+                - generic [ref=e2067]: "562500.00"
+              - generic:
+                - generic [ref=e2068]: 02/10/2026
+                - generic [ref=e2069]: BDO Makati
+                - generic [ref=e2070]: TRA-2026-01-001
+                - generic [ref=e2071]: "45000.00"
+                - generic [ref=e2072]: "0.00"
+                - generic [ref=e2073]: "45000.00"
+              - generic:
+                - generic [ref=e2074]: 03/10/2026
+                - generic [ref=e2075]: BDO Makati
+                - generic [ref=e2076]: TRA-2026-02-001
+                - generic [ref=e2077]: "38000.00"
+                - generic [ref=e2078]: "0.00"
+                - generic [ref=e2079]: "38000.00"
+              - generic:
+                - generic [ref=e2080]: 04/10/2026
+                - generic [ref=e2081]: BDO Makati
+                - generic [ref=e2082]: TRA-2026-03-001
+                - generic [ref=e2083]: "52000.00"
+                - generic [ref=e2084]: "0.00"
+                - generic [ref=e2085]: "52000.00"
+              - generic:
+                - generic [ref=e2086]: 05/10/2026
+                - generic [ref=e2087]: BDO Makati
+                - generic [ref=e2088]: TRA-2026-04-001
+                - generic [ref=e2089]: "41000.00"
+                - generic [ref=e2090]: "0.00"
+                - generic [ref=e2091]: "41000.00"
+              - generic:
+                - generic [ref=e2092]: 06/10/2026
+                - generic [ref=e2093]: BDO Makati
+                - generic [ref=e2094]: TRA-2026-05-001
+                - generic [ref=e2095]: "55000.00"
+                - generic [ref=e2096]: "0.00"
+                - generic [ref=e2097]: "55000.00"
+              - generic:
+                - generic [ref=e2098]: 07/10/2026
+                - generic [ref=e2099]: BDO Makati
+                - generic [ref=e2100]: TRA-2026-06-001
+                - generic [ref=e2101]: "48000.00"
+                - generic [ref=e2102]: "0.00"
+                - generic [ref=e2103]: "48000.00"
+              - generic:
+                - generic [ref=e2104]: 08/10/2026
+                - generic [ref=e2105]: BDO Makati
+                - generic [ref=e2106]: TRA-2026-07-001
+                - generic [ref=e2107]: "43000.00"
+                - generic [ref=e2108]: "0.00"
+                - generic [ref=e2109]: "43000.00"
+              - generic:
+                - generic [ref=e2110]: 09/10/2026
+                - generic [ref=e2111]: BDO Makati
+                - generic [ref=e2112]: TRA-2026-08-001
+                - generic [ref=e2113]: "51000.00"
+                - generic [ref=e2114]: "0.00"
+                - generic [ref=e2115]: "51000.00"
+              - generic:
+                - generic [ref=e2116]: 10/10/2026
+                - generic [ref=e2117]: BDO Makati
+                - generic [ref=e2118]: TRA-2026-09-001
+                - generic [ref=e2119]: "46000.00"
+                - generic [ref=e2120]: "1500.00"
+                - generic [ref=e2121]: "47500.00"
+              - generic:
+                - generic [ref=e2122]: 11/10/2026
+                - generic [ref=e2123]: BDO Makati
+                - generic [ref=e2124]: TRA-2026-10-001
+                - generic [ref=e2125]: "58000.00"
+                - generic [ref=e2126]: "0.00"
+                - generic [ref=e2127]: "58000.00"
+              - generic:
+                - generic [ref=e2128]: 12/10/2026
+                - generic [ref=e2129]: BDO Makati
+                - generic [ref=e2130]: TRA-2026-11-001
+                - generic [ref=e2131]: "49000.00"
+                - generic [ref=e2132]: "0.00"
+                - generic [ref=e2133]: "49000.00"
+              - generic:
+                - generic [ref=e2134]: 01/10/2027
+                - generic [ref=e2135]: BDO Makati
+                - generic [ref=e2136]: TRA-2026-12-001
+                - generic [ref=e2137]: "62000.00"
+                - generic [ref=e2138]: "0.00"
+                - generic [ref=e2139]: "62000.00"
+              - generic:
+                - generic [ref=e2142]: TOTAL
+                - generic [ref=e2143]: "588000.00"
+                - generic [ref=e2144]: "1500.00"
+                - generic [ref=e2145]: "589500.00"
+              - generic [ref=e2146]: JUAN MIGUEL DELA CRUZ
+            - generic [ref=e2152]:
+              - generic [ref=e2153]: "000000000000"
+              - generic [ref=e2154]: EXPEDIA SOLUTIONS SPECIALIST INC.
+              - generic:
+                - generic [ref=e2155]: "1"
+                - generic [ref=e2156]: 123-456-789-000
+                - generic [ref=e2157]: ACME CONSTRUCTION CORP.
+                - generic [ref=e2158]: WC010
+                - generic [ref=e2159]: "750000.00"
+                - generic [ref=e2160]: 10%
+                - generic [ref=e2161]: "75000.00"
+              - generic:
+                - generic [ref=e2162]: "2"
+                - generic [ref=e2163]: 987-654-321-001
+                - generic [ref=e2164]: SAN MIGUEL CORPORATION
+                - generic [ref=e2165]: WC158
+                - generic [ref=e2166]: "4500000.00"
+                - generic [ref=e2167]: 1%
+                - generic [ref=e2168]: "45000.00"
+              - generic:
+                - generic [ref=e2169]: "3"
+                - generic [ref=e2170]: 111-222-333-444
+                - generic [ref=e2171]: GLOBE TELECOM INC.
+                - generic [ref=e2172]: WC020
+                - generic [ref=e2173]: "255000.00"
+                - generic [ref=e2174]: 2%
+                - generic [ref=e2175]: "5100.00"
+              - generic:
+                - generic [ref=e2176]: "4"
+                - generic [ref=e2177]: 555-666-777-888
+                - generic [ref=e2178]: AYALA LAND INC.
+                - generic [ref=e2179]: WC040
+                - generic [ref=e2180]: "135000.00"
+                - generic [ref=e2181]: 5%
+                - generic [ref=e2182]: "6750.00"
+              - generic:
+                - generic [ref=e2183]: "5"
+                - generic [ref=e2184]: 999-000-111-222
+                - generic [ref=e2185]: SUNLIFE FINANCIAL
+                - generic [ref=e2186]: WC070
+                - generic [ref=e2187]: "90000.00"
+                - generic [ref=e2188]: 10%
+                - generic [ref=e2189]: "9000.00"
+              - generic:
+                - generic [ref=e2190]: "1"
+                - generic [ref=e2191]: 000-111-222-333
+                - generic [ref=e2192]: NATIONAL GOVERNMENT (BOC)
+                - generic [ref=e2193]: WB010
+                - generic [ref=e2194]: Gov supplies
+                - generic [ref=e2195]: "325000.00"
+              - generic:
+                - generic [ref=e2196]: "2"
+                - generic [ref=e2197]: 000-222-333-444
+                - generic [ref=e2198]: DEPARTMENT OF PUBLIC WORKS
+                - generic [ref=e2199]: WB020
+                - generic [ref=e2200]: Gov services
+                - generic [ref=e2201]: "215000.00"
+              - generic:
+                - generic [ref=e2202]: "3"
+                - generic [ref=e2203]: 000-333-444-555
+                - generic [ref=e2204]: CITY OF MAKATI LGU
+                - generic [ref=e2205]: WB030
+                - generic [ref=e2206]: Gov purchases
+                - generic [ref=e2207]: "180000.00"
+              - generic:
+                - generic [ref=e2208]: "4"
+                - generic [ref=e2209]: 000-444-555-666
+                - generic [ref=e2210]: PHIL HEALTH (GOV)
+                - generic [ref=e2211]: WB040
+                - generic [ref=e2212]: Gov rental
+                - generic [ref=e2213]: "96000.00"
+              - generic:
+                - generic [ref=e2214]: "5"
+                - generic [ref=e2215]: 000-555-666-777
+                - generic [ref=e2216]: SSS (GOVERNMENT)
+                - generic [ref=e2217]: WB050
+                - generic [ref=e2218]: Gov toll fees
+                - generic [ref=e2219]: "52000.00"

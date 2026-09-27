@@ -1,0 +1,4 @@
+TOTAL=8
+BY_SOURCE: Projects=6, Document Management=1, CRM / Sales=1
+SAMPLE_EXTERNAL: PRJ-DOC-6|List of Startups - Template__ (1).xlsx|GEEK-2026-PRJ-0001|src=project|id=6
+METRICS total=8 active=7

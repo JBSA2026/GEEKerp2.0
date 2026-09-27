@@ -1,0 +1,377 @@
+{
+  "form_id": "2307",
+  "form_name": "Certificate of Creditable Tax Withheld at Source",
+  "revision": "January 2018 (ENCS)",
+  "pages": 1,
+  "notes": "Page 2 of the PDF is an ATC reference schedule, not part of the fillable form.",
+
+  "header": {
+    "bir_use_only": {
+      "bcs": { "label": "BCS/", "type": "text", "readonly": true, "description": "For BIR Use Only" },
+      "item": { "label": "Item:", "type": "text", "readonly": true, "description": "For BIR Use Only" }
+    }
+  },
+
+  "sections": [
+    {
+      "id": "period",
+      "label": "For the Period",
+      "field_number": "1",
+      "fields": [
+        {
+          "id": "period_from",
+          "label": "From",
+          "type": "date",
+          "format": "MM/DD/YYYY",
+          "required": true,
+          "description": "Start of period covered"
+        },
+        {
+          "id": "period_to",
+          "label": "To",
+          "type": "date",
+          "format": "MM/DD/YYYY",
+          "required": true,
+          "description": "End of period covered"
+        }
+      ]
+    },
+    {
+      "id": "part1_payee",
+      "label": "Part I – Payee Information",
+      "fields": [
+        {
+          "id": "payee_tin",
+          "field_number": "2",
+          "label": "Taxpayer Identification Number (TIN)",
+          "type": "tin",
+          "format": "NNN-NNN-NNN-NNN",
+          "segments": [3, 3, 3, 3],
+          "separators": ["-", "-", "-"],
+          "required": true,
+          "description": "Payee's 12-digit TIN with dashes"
+        },
+        {
+          "id": "payee_name",
+          "field_number": "3",
+          "label": "Payee's Name",
+          "type": "text",
+          "required": true,
+          "description": "Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual",
+          "max_length": 100
+        },
+        {
+          "id": "payee_address",
+          "field_number": "4",
+          "label": "Registered Address",
+          "type": "text",
+          "required": true,
+          "max_length": 150
+        },
+        {
+          "id": "payee_zip_code",
+          "field_number": "4A",
+          "label": "ZIP Code",
+          "type": "text",
+          "format": "NNNN",
+          "max_length": 4
+        },
+        {
+          "id": "payee_foreign_address",
+          "field_number": "5",
+          "label": "Foreign Address, if applicable",
+          "type": "text",
+          "required": false,
+          "max_length": 150
+        }
+      ]
+    },
+    {
+      "id": "part2_payor",
+      "label": "Part II – Payor Information",
+      "fields": [
+        {
+          "id": "payor_tin",
+          "field_number": "6",
+          "label": "Taxpayer Identification Number (TIN)",
+          "type": "tin",
+          "format": "NNN-NNN-NNN-NNN",
+          "segments": [3, 3, 3, 3],
+          "separators": ["-", "-", "-"],
+          "required": true,
+          "description": "Payor's 12-digit TIN with dashes"
+        },
+        {
+          "id": "payor_name",
+          "field_number": "7",
+          "label": "Payor's Name",
+          "type": "text",
+          "required": true,
+          "description": "Last Name, First Name, Middle Name for Individual OR Registered Name for Non-Individual",
+          "max_length": 100
+        },
+        {
+          "id": "payor_address",
+          "field_number": "8",
+          "label": "Registered Address",
+          "type": "text",
+          "required": true,
+          "max_length": 150
+        },
+        {
+          "id": "payor_zip_code",
+          "field_number": "8A",
+          "label": "ZIP Code",
+          "type": "text",
+          "format": "NNNN",
+          "max_length": 4
+        }
+      ]
+    },
+    {
+      "id": "part3_income_payments",
+      "label": "Part III – Details of Monthly Income Payments and Taxes Withheld",
+      "description": "Two tables: (A) Income Payments Subject to Expanded Withholding Tax, (B) Money Payments Subject to Withholding of Business Tax",
+      "tables": [
+        {
+          "id": "table_a_ewt",
+          "label": "Income Payments Subject to Expanded Withholding Tax",
+          "fixed_rows": 11,
+          "row_behavior": "fixed",
+          "columns": [
+            {
+              "id": "nature_of_payment",
+              "label": "Income Payments Subject to Expanded Withholding Tax",
+              "type": "text",
+              "width": "28%",
+              "description": "Nature/description of income payment"
+            },
+            {
+              "id": "atc",
+              "label": "ATC",
+              "type": "searchable_dropdown",
+              "width": "8%",
+              "description": "Alphanumeric Tax Code — searchable dropdown from ATC schedule (page 2 of form)",
+              "dropdown_source": "atc_reference",
+              "allow_view_all": true
+            },
+            {
+              "id": "month1_amount",
+              "label": "1st Month of the Quarter",
+              "type": "number",
+              "width": "14%",
+              "decimal_places": 2,
+              "description": "Amount of income payment for 1st month of quarter"
+            },
+            {
+              "id": "month2_amount",
+              "label": "2nd Month of the Quarter",
+              "type": "number",
+              "width": "14%",
+              "decimal_places": 2,
+              "description": "Amount of income payment for 2nd month of quarter"
+            },
+            {
+              "id": "month3_amount",
+              "label": "3rd Month of the Quarter",
+              "type": "number",
+              "width": "14%",
+              "decimal_places": 2,
+              "description": "Amount of income payment for 3rd month of quarter"
+            },
+            {
+              "id": "total",
+              "label": "Total",
+              "type": "number",
+              "width": "12%",
+              "decimal_places": 2,
+              "computed": true,
+              "formula": "month1_amount + month2_amount + month3_amount",
+              "description": "Sum of 3 months"
+            },
+            {
+              "id": "tax_withheld",
+              "label": "Tax Withheld for the Quarter",
+              "type": "number",
+              "width": "10%",
+              "decimal_places": 2,
+              "description": "Total tax withheld for this income type for the quarter"
+            }
+          ],
+          "has_total_row": true,
+          "total_row_label": "Total",
+          "total_row_computed_columns": ["month1_amount", "month2_amount", "month3_amount", "total", "tax_withheld"]
+        },
+        {
+          "id": "table_b_business_tax",
+          "label": "Money Payments Subject to Withholding of Business Tax (Government & Private)",
+          "fixed_rows": 11,
+          "row_behavior": "fixed",
+          "columns": [
+            {
+              "id": "nature_of_payment",
+              "label": "Money Payments Subject to Withholding of Business Tax (Government & Private)",
+              "type": "text",
+              "width": "28%",
+              "description": "Nature/description of money payment"
+            },
+            {
+              "id": "atc",
+              "label": "ATC",
+              "type": "searchable_dropdown",
+              "width": "8%",
+              "description": "Alphanumeric Tax Code — searchable dropdown from ATC schedule",
+              "dropdown_source": "atc_reference",
+              "allow_view_all": true
+            },
+            {
+              "id": "month1_amount",
+              "label": "1st Month of the Quarter",
+              "type": "number",
+              "width": "14%",
+              "decimal_places": 2
+            },
+            {
+              "id": "month2_amount",
+              "label": "2nd Month of the Quarter",
+              "type": "number",
+              "width": "14%",
+              "decimal_places": 2
+            },
+            {
+              "id": "month3_amount",
+              "label": "3rd Month of the Quarter",
+              "type": "number",
+              "width": "14%",
+              "decimal_places": 2
+            },
+            {
+              "id": "total",
+              "label": "Total",
+              "type": "number",
+              "width": "12%",
+              "decimal_places": 2,
+              "computed": true,
+              "formula": "month1_amount + month2_amount + month3_amount"
+            },
+            {
+              "id": "tax_withheld",
+              "label": "Tax Withheld for the Quarter",
+              "type": "number",
+              "width": "10%",
+              "decimal_places": 2
+            }
+          ],
+          "has_total_row": true,
+          "total_row_label": "Total",
+          "total_row_computed_columns": ["month1_amount", "month2_amount", "month3_amount", "total", "tax_withheld"]
+        }
+      ]
+    },
+    {
+      "id": "signatory_payor",
+      "label": "Payor/Payor's Authorized Representative Signatory",
+      "fields": [
+        {
+          "id": "payor_signatory_name",
+          "label": "Signature over Printed Name of Payor/Payor's Authorized Representative/Tax Agent",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "payor_signatory_title_tin",
+          "label": "Indicate Title/Designation and TIN",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "payor_agent_accreditation_no",
+          "label": "Tax Agent Accreditation No./Attorney's Roll No. (if applicable)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "payor_date_of_issue",
+          "label": "Date of Issue",
+          "type": "date",
+          "format": "MM/DD/YYYY"
+        },
+        {
+          "id": "payor_date_of_expiry",
+          "label": "Date of Expiry",
+          "type": "date",
+          "format": "MM/DD/YYYY"
+        }
+      ]
+    },
+    {
+      "id": "conforme",
+      "label": "CONFORME",
+      "description": "Payee acknowledgment section",
+      "fields": [
+        {
+          "id": "payee_signatory_name",
+          "label": "Signature over Printed Name of Payee/Payee's Authorized Representative/Tax Agent",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "payee_signatory_title_tin",
+          "label": "Indicate Title/Designation and TIN",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "payee_agent_accreditation_no",
+          "label": "Tax Agent Accreditation No./Attorney's Roll No. (if applicable)",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "payee_date_of_issue",
+          "label": "Date of Issue",
+          "type": "date",
+          "format": "MM/DD/YYYY"
+        },
+        {
+          "id": "payee_date_of_expiry",
+          "label": "Date of Expiry",
+          "type": "date",
+          "format": "MM/DD/YYYY"
+        }
+      ]
+    }
+  ],
+
+  "legal_text": "We declare under the penalties of perjury that this certificate has been made in good faith, verified by us, and to the best of our knowledge and belief, is true and correct, pursuant to the provisions of the National Internal Revenue Code, as amended, and the regulations issued under authority thereof. Further, we give our consent to the processing of our information as contemplated under the *Data Privacy Act of 2012 (R.A. No. 10173) for legitimate and lawful purposes.",
+
+  "auto_populate_mapping": {
+    "payee_tin": "source: client_list.tin_number (when our entity is the payor/withholding agent)",
+    "payee_name": "source: client_list.company_name",
+    "payee_address": "source: client_list.address",
+    "payor_tin": "source: entity TIN from company settings (EXSSI/GreatnessLab/Exigent/KSI)",
+    "payor_name": "source: entity registered name from company settings",
+    "payor_address": "source: entity registered address from company settings",
+    "table_a_rows": "source: ar_invoices filtered by customer + quarter, grouped by ATC, with monthly breakdown of billing_subtotal and wht_amount"
+  },
+
+  "atc_reference": {
+    "description": "Page 2 of the PDF contains the full ATC schedule. Common codes for this ERP context:",
+    "common_codes": [
+      { "code": "WI010", "type": "Individual", "description": "Professional fees (Lawyers, CPAs, Engineers) - income ≤ P3M" },
+      { "code": "WI011", "type": "Individual", "description": "Professional fees - income > P3M or VAT registered" },
+      { "code": "WC010", "type": "Corporation", "description": "Professional fees (Lawyers, CPAs, Engineers) - income ≤ P720K" },
+      { "code": "WC011", "type": "Corporation", "description": "Professional fees - income > P720K" },
+      { "code": "WI100", "type": "Individual", "description": "Rentals (real/personal property > P10K annually)" },
+      { "code": "WC100", "type": "Corporation", "description": "Rentals (real/personal property > P10K annually)" },
+      { "code": "WI157", "type": "Individual", "description": "Income payments by gov't-owned corps to local/resident suppliers" },
+      { "code": "WC157", "type": "Corporation", "description": "Income payments by gov't-owned corps to local/resident suppliers" },
+      { "code": "WI158", "type": "Individual", "description": "Income payment by top withholding agents to local/resident supplier" },
+      { "code": "WC158", "type": "Corporation", "description": "Income payment by top withholding agents to local/resident supplier" },
+      { "code": "WI160", "type": "Individual", "description": "Income payment by top withholding agents - other rates" },
+      { "code": "WC160", "type": "Corporation", "description": "Income payment by top withholding agents - other rates" },
+      { "code": "WC050", "type": "Corporation", "description": "Purchases of minerals, products, quarry - income ≤ P720K" },
+      { "code": "WC051", "type": "Corporation", "description": "Purchases of minerals, products, quarry - income > P720K" }
+    ]
+  }
+}

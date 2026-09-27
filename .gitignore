@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Tests
+frontend/src/test/
+frontend/src/pages/__tests__/
+*.test.jsx
+
+# SQL migrations
+backend/migrations/*.sql
+supabase/migrations/*.sql
+!supabase/migrations/20260709150000_add_payment_file_to_ap_payments.sql
+!supabase/migrations/20260712000100_use_vat_codes_in_purchasing_and_ap.sql
+!supabase/migrations/20260720000100_add_supplier_classifications.sql
+!supabase/migrations/20260720000200_add_supplier_address.sql
+!supabase/migrations/20260720000300_rename_inventory_codes_to_stk.sql
+!supabase/migrations/20260720000400_backfill_purchasing_entities_and_pending_stock.sql
+!supabase/migrations/20260720000500_repair_failed_pending_receive.sql
+!supabase/migrations/20260720000600_add_purchase_request_international_goods_type.sql
+!supabase/migrations/20260720000700_add_purchase_order_fx_snapshots.sql
+!supabase/migrations/20260722023556_normalize_client_contacts.sql
+!supabase/migrations/20260722031321_enforce_client_contact_delete_behavior.sql
+!supabase/migrations/20260722040000_consolidate_purchase_request_source.sql
+!supabase/migrations/20260722040100_backfill_ap_bill_entities.sql
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Build outputs
+dist/
+build/
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# AI tooling
+.codex/
+.kiro/
+.agents/
+graphify-out/
+AGENTS.md

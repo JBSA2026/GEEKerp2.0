@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f6f9;
+  --color-border: #dce2ea;
+  --color-muted: #a7b5d8;
+  --color-muted-fg: #65728a;
+  --color-text: #26324f;
+  --color-text-dim: #65728a;
+  --color-primary: #2c3a61;
+  --color-primary-hover: #202b49;
+  --color-accent: #91a4cf;
+  --color-success: #5d8796;
+  --color-warning: #91a4cf;
+  --color-danger: #8a4f68;
+  --color-sidebar: #26324f;
+  --color-sidebar-active: #8a4f68;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f7f8fa;
+  color: #26324f;
+  font-family: 'Poppins', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #a7b5d8; border-radius: 99px; }
+
+/* Reset native select elements to match UI (strip the native chevron only;
+   border is left to Tailwind border utilities so bordered selects render). */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2365728a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.login-stage {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f7f8fa;
+}
+
+.login-stage-entering {
+  animation: loginExit 0.58s ease forwards;
+}
+
+.login-card {
+  animation: loginCardIn 0.72s cubic-bezier(0.21, 0.8, 0.24, 1) both;
+}
+
+@keyframes loginCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes loginExit {
+  to {
+    opacity: 0;
+    transform: scale(1.025);
+    filter: blur(8px);
+  }
+}

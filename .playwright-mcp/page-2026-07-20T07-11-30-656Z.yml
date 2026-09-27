@@ -1,0 +1,399 @@
+- generic [ref=e2]:
+  - region "Notifications alt+T"
+  - generic [ref=e32]:
+    - complementary [ref=e33]:
+      - img "GEEK Group of Companies" [ref=e35]
+      - navigation [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: Core Modules
+          - list [ref=e40]:
+            - listitem [ref=e41]:
+              - link "Dashboard" [ref=e42] [cursor=pointer]:
+                - /url: /dashboard
+            - listitem [ref=e49]:
+              - link "Master Data" [ref=e50] [cursor=pointer]:
+                - /url: /masterdata
+            - listitem [ref=e56]:
+              - link "CRM / Sales" [ref=e57] [cursor=pointer]:
+                - /url: /crm
+            - listitem [ref=e63]:
+              - link "Quotation" [ref=e64] [cursor=pointer]:
+                - /url: /quotation
+            - listitem [ref=e69]:
+              - link "Purchasing" [ref=e70] [cursor=pointer]:
+                - /url: /purchasing
+            - listitem [ref=e75]:
+              - link "Inventory" [ref=e76] [cursor=pointer]:
+                - /url: /inventory
+            - listitem [ref=e82]:
+              - link "Projects" [ref=e83] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e87]:
+              - link "Accounts Receivable" [ref=e88] [cursor=pointer]:
+                - /url: /accounts-receivable
+            - listitem [ref=e93]:
+              - link "Accounts Payable" [ref=e94] [cursor=pointer]:
+                - /url: /accounts-payable
+            - listitem [ref=e98]:
+              - link "General Ledger" [ref=e99] [cursor=pointer]:
+                - /url: /general-ledger
+        - generic [ref=e103]:
+          - paragraph [ref=e104]: Additional Modules
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - link "HR Management" [ref=e107] [cursor=pointer]:
+                - /url: /hr
+            - listitem [ref=e114]:
+              - link "Payroll Management" [ref=e115] [cursor=pointer]:
+                - /url: /payroll
+            - listitem [ref=e119]:
+              - link "Tax Management" [active] [ref=e120] [cursor=pointer]:
+                - /url: /tax
+            - listitem [ref=e124]:
+              - link "LOA Retrieval" [ref=e125] [cursor=pointer]:
+                - /url: /loa
+            - listitem [ref=e130]:
+              - link "Document Management" [ref=e131] [cursor=pointer]:
+                - /url: /documents
+            - listitem [ref=e137]:
+              - link "Workflow Approval" [ref=e138] [cursor=pointer]:
+                - /url: /workflow
+            - listitem [ref=e144]:
+              - link "Service Management" [ref=e145] [cursor=pointer]:
+                - /url: /service
+            - listitem [ref=e149]:
+              - link "Data Center Projects" [ref=e150] [cursor=pointer]:
+                - /url: /datacenter
+            - listitem [ref=e155]:
+              - link "LMS Management" [ref=e156] [cursor=pointer]:
+                - /url: /lms
+            - listitem [ref=e161]:
+              - link "Executive AI Assistant" [ref=e162] [cursor=pointer]:
+                - /url: /ai
+            - listitem [ref=e167]:
+              - link "OJT & Internship" [ref=e168] [cursor=pointer]:
+                - /url: /ojt
+            - listitem [ref=e173]:
+              - link "Commission Management" [ref=e174] [cursor=pointer]:
+                - /url: /commission
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: Reports & Analytics
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - link "Reports" [ref=e183] [cursor=pointer]:
+                - /url: /reports
+            - listitem [ref=e187]:
+              - link "BI Analytics" [ref=e188] [cursor=pointer]:
+                - /url: /bi
+        - generic [ref=e193]:
+          - paragraph [ref=e194]: System
+          - list [ref=e195]:
+            - listitem [ref=e196]:
+              - link "Administration" [ref=e197] [cursor=pointer]:
+                - /url: /administration
+            - listitem [ref=e201]:
+              - link "System Settings" [ref=e202] [cursor=pointer]:
+                - /url: /settings
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - generic [ref=e210]: SA
+          - generic [ref=e211]:
+            - paragraph [ref=e212]: Super Admin
+            - paragraph [ref=e213]: SUPER ADMIN
+        - button "Logout" [ref=e214]
+    - generic [ref=e555]:
+      - generic [ref=e556]:
+        - heading "Tax Management" [level=1] [ref=e558]
+        - button "All Companies" [ref=e561]
+      - generic [ref=e566]:
+        - button "Dashboard" [ref=e567]
+        - button "BIR Forms" [ref=e568]
+        - button "VAT Summary" [ref=e569]
+        - button "WHT / EWT" [ref=e570]
+        - button "Filing Deadlines" [ref=e571]
+        - button "Tax Codes" [ref=e572]
+      - generic [ref=e574]:
+        - generic [ref=e575]:
+          - generic [ref=e576]: 10 compliance issues detected
+          - button "Refresh" [ref=e581] [cursor=pointer]
+        - generic [ref=e587]:
+          - generic [ref=e588]:
+            - paragraph [ref=e589]: Draft Forms
+            - paragraph [ref=e590]: "40"
+          - generic [ref=e591]:
+            - paragraph [ref=e592]: Pending Approval
+            - paragraph [ref=e593]: "0"
+          - generic [ref=e594]:
+            - paragraph [ref=e595]: Finalized
+            - paragraph [ref=e596]: "3"
+          - generic [ref=e597]:
+            - paragraph [ref=e598]: Net VAT Position
+            - paragraph [ref=e599]: ₱-4,749,846.60
+        - generic [ref=e600]:
+          - generic [ref=e601]:
+            - heading "Missing Forms" [level=3] [ref=e606]
+            - paragraph [ref=e608]: ✓ All expected forms have been generated
+          - generic [ref=e609]:
+            - generic [ref=e610]:
+              - heading "Overdue — Still in Draft" [level=3] [ref=e614]
+              - generic [ref=e615]: "10"
+            - generic [ref=e617]:
+              - generic [ref=e618] [cursor=pointer]:
+                - generic [ref=e624]:
+                  - paragraph [ref=e625]: "2307"
+                  - paragraph [ref=e626]: Expedia · 2026-01-01 to 2026-03-31
+                - generic [ref=e627]: Draft
+              - generic [ref=e634] [cursor=pointer]:
+                - generic [ref=e640]:
+                  - paragraph [ref=e641]: 0619E
+                  - paragraph [ref=e642]: Exigent · 2026-04-01 to 2026-04-30
+                - generic [ref=e643]: Draft
+              - generic [ref=e650] [cursor=pointer]:
+                - generic [ref=e656]:
+                  - paragraph [ref=e657]: 0619E
+                  - paragraph [ref=e658]: KSI · 2026-04-01 to 2026-04-30
+                - generic [ref=e659]: Draft
+              - generic [ref=e666] [cursor=pointer]:
+                - generic [ref=e672]:
+                  - paragraph [ref=e673]: 1601C
+                  - paragraph [ref=e674]: KSI · 2026-04-01 to 2026-04-30
+                - generic [ref=e675]: Draft
+              - generic [ref=e682] [cursor=pointer]:
+                - generic [ref=e688]:
+                  - paragraph [ref=e689]: 1600VT
+                  - paragraph [ref=e690]: Exigent · 2026-04-01 to 2026-04-30
+                - generic [ref=e691]: Draft
+              - generic [ref=e698] [cursor=pointer]:
+                - generic [ref=e704]:
+                  - paragraph [ref=e705]: 1601C
+                  - paragraph [ref=e706]: Exigent · 2026-04-01 to 2026-04-30
+                - generic [ref=e707]: Draft
+              - generic [ref=e714] [cursor=pointer]:
+                - generic [ref=e720]:
+                  - paragraph [ref=e721]: 0619E
+                  - paragraph [ref=e722]: GreatnessLab · 2026-04-01 to 2026-04-30
+                - generic [ref=e723]: Draft
+              - generic [ref=e730] [cursor=pointer]:
+                - generic [ref=e736]:
+                  - paragraph [ref=e737]: 1600VT
+                  - paragraph [ref=e738]: GreatnessLab · 2026-04-01 to 2026-04-30
+                - generic [ref=e739]: Draft
+              - generic [ref=e746] [cursor=pointer]:
+                - generic [ref=e752]:
+                  - paragraph [ref=e753]: 1601C
+                  - paragraph [ref=e754]: GreatnessLab · 2026-04-01 to 2026-04-30
+                - generic [ref=e755]: Draft
+              - generic [ref=e762] [cursor=pointer]:
+                - generic [ref=e768]:
+                  - paragraph [ref=e769]: 1600VT
+                  - paragraph [ref=e770]: KSI · 2026-04-01 to 2026-04-30
+                - generic [ref=e771]: Draft
+          - generic [ref=e778]:
+            - generic [ref=e779]:
+              - heading "Needs Your Action" [level=3] [ref=e783]
+              - generic [ref=e784]: "30"
+            - generic [ref=e786]:
+              - generic [ref=e787] [cursor=pointer]:
+                - generic [ref=e793]:
+                  - paragraph [ref=e794]: 1604E
+                  - paragraph [ref=e795]: Expedia · 2026-01-01 to 2026-12-31
+                - generic [ref=e796]: Draft
+              - generic [ref=e803] [cursor=pointer]:
+                - generic [ref=e809]:
+                  - paragraph [ref=e810]: 2307 — PHILIPPINE NATIONAL CONSTRUCTION & HEAVY EQUIPMENT MANUFACTURING CORPORATION OF THE VISAYAS AND MINDANAO
+                  - paragraph [ref=e811]: Expedia · 2026-10-01 to 2026-12-31
+                - generic [ref=e812]: Draft
+              - generic [ref=e819] [cursor=pointer]:
+                - generic [ref=e825]:
+                  - paragraph [ref=e826]: 2307 — ACME CONSTRUCTION & DEVELOPMENT CORPORATION
+                  - paragraph [ref=e827]: Expedia · 2026-01-01 to 2026-03-31
+                - generic [ref=e828]: Draft
+              - generic [ref=e835] [cursor=pointer]:
+                - generic [ref=e841]:
+                  - paragraph [ref=e842]: 1702Q
+                  - paragraph [ref=e843]: KSI · 2026-04-01 to 2026-06-30
+                - generic [ref=e844]: Draft
+              - generic [ref=e851] [cursor=pointer]:
+                - generic [ref=e857]:
+                  - paragraph [ref=e858]: 2550Q
+                  - paragraph [ref=e859]: KSI · 2026-04-01 to 2026-06-30
+                - generic [ref=e860]: Draft
+              - generic [ref=e867] [cursor=pointer]:
+                - generic [ref=e873]:
+                  - paragraph [ref=e874]: 1601EQ
+                  - paragraph [ref=e875]: KSI · 2026-04-01 to 2026-06-30
+                - generic [ref=e876]: Draft
+              - generic [ref=e883] [cursor=pointer]:
+                - generic [ref=e889]:
+                  - paragraph [ref=e890]: 1600VT
+                  - paragraph [ref=e891]: KSI · 2026-06-01 to 2026-06-30
+                - generic [ref=e892]: Draft
+              - generic [ref=e899] [cursor=pointer]:
+                - generic [ref=e905]:
+                  - paragraph [ref=e906]: 1601C
+                  - paragraph [ref=e907]: KSI · 2026-06-01 to 2026-06-30
+                - generic [ref=e908]: Draft
+              - generic [ref=e915] [cursor=pointer]:
+                - generic [ref=e921]:
+                  - paragraph [ref=e922]: 0619E
+                  - paragraph [ref=e923]: KSI · 2026-06-01 to 2026-06-30
+                - generic [ref=e924]: Draft
+              - generic [ref=e931] [cursor=pointer]:
+                - generic [ref=e937]:
+                  - paragraph [ref=e938]: 1702Q
+                  - paragraph [ref=e939]: Exigent · 2026-04-01 to 2026-06-30
+                - generic [ref=e940]: Draft
+              - paragraph [ref=e947]: + 20 more forms
+          - generic [ref=e948]:
+            - heading "Upcoming Deadlines" [level=3] [ref=e955]
+            - generic [ref=e957]:
+              - generic [ref=e958]:
+                - generic [ref=e959]:
+                  - paragraph [ref=e960]: BIR 0619-E
+                  - paragraph [ref=e961]: Monthly EWT Remittance
+                  - paragraph [ref=e962]: "Due: Aug 10, 2026 · Period: July 2026"
+                - generic [ref=e963]: 21d
+              - generic [ref=e964]:
+                - generic [ref=e965]:
+                  - paragraph [ref=e966]: SSS
+                  - paragraph [ref=e967]: SSS Contribution Remittance
+                  - paragraph [ref=e968]: "Due: Aug 15, 2026 · Period: July 2026"
+                - generic [ref=e969]: 26d
+              - generic [ref=e970]:
+                - generic [ref=e971]:
+                  - paragraph [ref=e972]: PhilHealth
+                  - paragraph [ref=e973]: PhilHealth Contribution Remittance
+                  - paragraph [ref=e974]: "Due: Aug 15, 2026 · Period: July 2026"
+                - generic [ref=e975]: 26d
+              - generic [ref=e976]:
+                - generic [ref=e977]:
+                  - paragraph [ref=e978]: Pag-IBIG
+                  - paragraph [ref=e979]: Pag-IBIG / HDMF Contribution Remittance
+                  - paragraph [ref=e980]: "Due: Aug 15, 2026 · Period: July 2026"
+                - generic [ref=e981]: 26d
+              - generic [ref=e982]:
+                - generic [ref=e983]:
+                  - paragraph [ref=e984]: BIR 2550M
+                  - paragraph [ref=e985]: Monthly VAT Return
+                  - paragraph [ref=e986]: "Due: Aug 20, 2026 · Period: July 2026"
+                - generic [ref=e987]: 31d
+              - generic [ref=e988]:
+                - generic [ref=e989]:
+                  - paragraph [ref=e990]: BIR 2550Q
+                  - paragraph [ref=e991]: Quarterly VAT Return
+                  - paragraph [ref=e992]: "Due: Oct 25, 2026 · Period: Q3 2026"
+                - generic [ref=e993]: 97d
+          - generic [ref=e994]:
+            - generic [ref=e995]:
+              - heading "Entity Configuration Gaps" [level=3] [ref=e1001]
+              - generic [ref=e1002]: "3"
+            - generic [ref=e1004]:
+              - generic [ref=e1005]:
+                - generic [ref=e1006]:
+                  - paragraph [ref=e1007]: Expedia
+                  - paragraph [ref=e1008]: Missing RDO code
+                - generic [ref=e1009]: Low
+              - generic [ref=e1013]:
+                - generic [ref=e1014]:
+                  - paragraph [ref=e1015]: GreatnessLab
+                  - paragraph [ref=e1016]: Missing RDO code
+                - generic [ref=e1017]: Low
+              - generic [ref=e1021]:
+                - generic [ref=e1022]:
+                  - paragraph [ref=e1023]: Exigent
+                  - paragraph [ref=e1024]: Missing RDO code
+                - generic [ref=e1025]: Low
+          - generic [ref=e1029]:
+            - heading "Recent Activity" [level=3] [ref=e1034]
+            - generic [ref=e1036]:
+              - generic [ref=e1037] [cursor=pointer]:
+                - generic [ref=e1043]:
+                  - paragraph [ref=e1044]: "2307"
+                  - paragraph [ref=e1045]: Form finalized by superadmin@geek
+                - generic [ref=e1046]:
+                  - generic [ref=e1047]: Finalized
+                  - generic [ref=e1048]: Jul 17, 2026
+              - generic [ref=e1049] [cursor=pointer]:
+                - generic [ref=e1055]:
+                  - paragraph [ref=e1056]: "2307"
+                  - paragraph [ref=e1057]: "Auto-generated from invoice confirmation. Payee: San Miguel Corp."
+                - generic [ref=e1058]:
+                  - generic [ref=e1059]: Auto-generated
+                  - generic [ref=e1060]: Jul 17, 2026
+              - generic [ref=e1061] [cursor=pointer]:
+                - generic [ref=e1067]:
+                  - paragraph [ref=e1068]: 1600VT (KSI)
+                  - paragraph [ref=e1069]: AUTO_UPDATED via close_period for 04/2026
+                - generic [ref=e1070]:
+                  - generic [ref=e1071]: Auto-updated
+                  - generic [ref=e1072]: Jul 16, 2026
+              - generic [ref=e1073] [cursor=pointer]:
+                - generic [ref=e1079]:
+                  - paragraph [ref=e1080]: 1601C (KSI)
+                  - paragraph [ref=e1081]: AUTO_UPDATED via close_period for 04/2026
+                - generic [ref=e1082]:
+                  - generic [ref=e1083]: Auto-updated
+                  - generic [ref=e1084]: Jul 16, 2026
+              - generic [ref=e1085] [cursor=pointer]:
+                - generic [ref=e1091]:
+                  - paragraph [ref=e1092]: 0619E (KSI)
+                  - paragraph [ref=e1093]: AUTO_UPDATED via close_period for 04/2026
+                - generic [ref=e1094]:
+                  - generic [ref=e1095]: Auto-updated
+                  - generic [ref=e1096]: Jul 16, 2026
+              - generic [ref=e1097] [cursor=pointer]:
+                - generic [ref=e1103]:
+                  - paragraph [ref=e1104]: 1702Q (KSI)
+                  - paragraph [ref=e1105]: AUTO_GENERATED via close_period for Q2/2026
+                - generic [ref=e1106]:
+                  - generic [ref=e1107]: Auto-generated
+                  - generic [ref=e1108]: Jul 16, 2026
+              - generic [ref=e1109] [cursor=pointer]:
+                - generic [ref=e1115]:
+                  - paragraph [ref=e1116]: 2550Q (KSI)
+                  - paragraph [ref=e1117]: AUTO_GENERATED via close_period for Q2/2026
+                - generic [ref=e1118]:
+                  - generic [ref=e1119]: Auto-generated
+                  - generic [ref=e1120]: Jul 16, 2026
+              - generic [ref=e1121] [cursor=pointer]:
+                - generic [ref=e1127]:
+                  - paragraph [ref=e1128]: 1601EQ (KSI)
+                  - paragraph [ref=e1129]: AUTO_GENERATED via close_period for Q2/2026
+                - generic [ref=e1130]:
+                  - generic [ref=e1131]: Auto-generated
+                  - generic [ref=e1132]: Jul 16, 2026
+              - generic [ref=e1133] [cursor=pointer]:
+                - generic [ref=e1139]:
+                  - paragraph [ref=e1140]: 1600VT (KSI)
+                  - paragraph [ref=e1141]: AUTO_GENERATED via close_period for 06/2026
+                - generic [ref=e1142]:
+                  - generic [ref=e1143]: Auto-generated
+                  - generic [ref=e1144]: Jul 16, 2026
+              - generic [ref=e1145] [cursor=pointer]:
+                - generic [ref=e1151]:
+                  - paragraph [ref=e1152]: 1601C (KSI)
+                  - paragraph [ref=e1153]: AUTO_GENERATED via close_period for 06/2026
+                - generic [ref=e1154]:
+                  - generic [ref=e1155]: Auto-generated
+                  - generic [ref=e1156]: Jul 16, 2026
+        - generic [ref=e1157]:
+          - generic [ref=e1158]:
+            - heading "Current Tax Position" [level=3] [ref=e1159]
+            - button "View Details →" [ref=e1160]
+          - generic [ref=e1161]:
+            - generic [ref=e1162]:
+              - paragraph [ref=e1163]: Output VAT
+              - paragraph [ref=e1164]: ₱2,210,484.00
+              - paragraph [ref=e1165]: 6 invoices
+            - generic [ref=e1166]:
+              - paragraph [ref=e1167]: Input VAT
+              - paragraph [ref=e1168]: ₱6,960,330.60
+              - paragraph [ref=e1169]: 14 bills
+            - generic [ref=e1170]:
+              - paragraph [ref=e1171]: WHT (from Customers)
+              - paragraph [ref=e1172]: ₱184,207.00
+              - paragraph [ref=e1173]: 6 invoices
+            - generic [ref=e1174]:
+              - paragraph [ref=e1175]: EWT (to Suppliers)
+              - paragraph [ref=e1176]: ₱580,027.55
+              - paragraph [ref=e1177]: 14 bills
